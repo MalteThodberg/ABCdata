@@ -1,10 +1,10 @@
 Package: ABCdata
 Type: Package
-Title: Datasets for the Advanced Bioinformatics Course (ABC) 2015.
+Title: Datasets for the Advanced Bioinformatics Course (ABC) 2015
 Version: 0.1
 Date: 2015-09-22
 Author: Malte Thodberg
-Maintainer: malte.thodberg@bio.ku.dk
+Maintainer: <malte.thodberg@bio.ku.dk>
 Description: Several datasets for use in differential epxression exercises.
 License: GPL-3
 LazyData: TRUE
