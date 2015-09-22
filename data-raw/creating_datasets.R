@@ -10,10 +10,11 @@ YeastTimeSeriesExpression <- assay(fission)
 YeastTimeSeriesDesign <- as.data.frame(colData(fission))
 YeastTimeSeriesAnnotation <- as.data.frame(rowRanges(fission))
 
-save(YeastTimeSeriesDesign,
-		 YeastTimeSeriesAnnotation,
-		 YeastTimeSeriesExpression,
-		 file="./data/YeastTimeSeries.rda")
+YeastTimeSeries <- list(Expression=YeastTimeSeriesExpression,
+												Design=YeastTimeSeriesDesign,
+												Annotation=YeastTimeSeriesAnnotation)
+
+save(YeastTimeSeries, file="./data/YeastTimeSeries.rda")
 
 ### Parathyroidea
 library(parathyroidSE)
@@ -39,10 +40,11 @@ ParathyroidTumorsAnnotation <- as.data.frame(rowRanges(parathyroidGenesSE)) %>%
 	as.data.frame %>%
 	set_rownames(rownames(ParathyroidTumorsExpression))
 
-save(ParathyroidTumorsDesign,
-		 ParathyroidTumorsAnnotation,
-		 ParathyroidTumorsExpression,
-		 file="./data/ParathyroidTumors.rda")
+ParathyroidTumors <- list(Expression=ParathyroidTumorsExpression,
+												Design=ParathyroidTumorsDesign,
+												Annotation=ParathyroidTumorsAnnotation)
+
+save(ParathyroidTumors, file="./data/ParathyroidTumors.rda")
 
 ### Parathyroidea
 library(zebrafishRNASeq)
@@ -57,7 +59,8 @@ ZebrafishAnnotation <- data.frame(id=rownames(zfGenes),
 
 ZebrafishExpression <- zfGenes
 
-save(ZebrafishDesign,
-		 ZebrafishAnnotation,
-		 ZebrafishExpression,
-		 file="./data/Zebrafish.rda")
+Zebrafish <- list(Expression=ZebrafishExpression,
+												Design=ZebrafishDesign,
+												Annotation=ZebrafishAnnotation)
+
+save(Zebrafish, file="./data/Zebrafish.rda")
