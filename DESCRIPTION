@@ -5,6 +5,6 @@ Version: 0.1
 Date: 2015-09-22
 Author: Malte Thodberg
 Maintainer: <malte.thodberg@bio.ku.dk>
-Description: Several datasets for use in differential epxression exercises.
+Description: Several datasets for use in differential expression analysis exercises.
 License: GPL-3
 LazyData: TRUE
