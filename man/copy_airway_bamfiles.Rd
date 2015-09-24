@@ -10,10 +10,10 @@
 copy_airway_bamfiles()
 }
 \description{
-Creates a directory "airway/" in the workind directory and copies example BAM-files into this folder.
+RNA-Seq data originally from bioconductor. For more information, see reference from URL.
 }
 \details{
-RNA-Seq data originally from bioconductor. For more information, see reference from URL.
+Creates a directory "airway/" in the current directory and copies example BAM-files into this folder.
 }
 \author{
 Malte Thodberg
