@@ -8,9 +8,11 @@ load(file=con)
 close(con)
 bot = hammer.eset
 
-RatNeurons <- list(Expression=pData(bot),
-									Design=fData(bot),
-									Annotation=as.matrix(exprs(bot)))
+RatNeurons <- list(Design=pData(bot),
+									Annotation=fData(bot),
+									Expression=as.matrix(exprs(bot)))
+
+names(RatNeurons$Expression) <- NULL
 
 save(RatNeurons, file="./data/RatNeurons.rda")
 
@@ -22,9 +24,11 @@ load(file=con)
 close(con)
 bot = wang.eset
 
-WangTissues <- list(Expression=pData(bot),
-									 Design=fData(bot),
-									 Annotation=as.matrix(exprs(bot)))
+WangTissues <- list(Design=pData(bot),
+										Annotation=fData(bot),
+										Expression=as.matrix(exprs(bot)))
+
+names(WangTissues$Expression) <- NULL
 
 save(WangTissues, file="./data/WangTissues.rda")
 
@@ -34,9 +38,11 @@ load(file=con)
 close(con)
 bot = bodymap.eset
 
-AsmannTissues <- list(Expression=pData(bot),
-										Design=fData(bot),
-										Annotation=as.matrix(exprs(bot)))
+AsmannTissues <- list(Design=pData(bot),
+											Annotation=fData(bot),
+											Expression=as.matrix(exprs(bot)))
+
+names(AsmannTissues$Expression) <- NULL
 
 save(AsmannTissues, file="./data/AsmannTissues.rda")
 
